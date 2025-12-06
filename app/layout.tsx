@@ -33,8 +33,8 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en" className={`${spaceGrotesk.variable} ${inter.variable}`}>
-      <body className="font-body bg-background text-text antialiased">
-        <main className="min-h-screen">{children}</main>
+      <body className="font-body bg-white text-text antialiased">
+        {children}
         <ConditionalFooter />
       </body>
     </html>

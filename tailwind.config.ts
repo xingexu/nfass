@@ -10,7 +10,7 @@ const config: Config = {
     extend: {
       colors: {
         primary: '#FF003D',
-        background: '#FAFAF8',
+        background: '#FFFFFF',
         surface: '#FFFFFF',
         text: '#111111',
         'muted-border': '#E5E5E5',
@@ -32,6 +32,7 @@ const config: Config = {
         'shine': 'shine 2s ease-in-out infinite',
         'bounce-slow': 'bounceSlow 3s ease-in-out infinite',
         'line-sweep': 'lineSweep 4s ease-in-out infinite',
+        'scroll': 'scroll 30s linear infinite',
       },
       keyframes: {
         fadeIn: {
@@ -41,6 +42,10 @@ const config: Config = {
         underlineExpand: {
           '0%': { width: '0%' },
           '100%': { width: '100%' },
+        },
+        scroll: {
+          '0%': { transform: 'translateX(0)' },
+          '100%': { transform: 'translateX(-50%)' },
         },
       },
     },

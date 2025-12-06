@@ -24,11 +24,11 @@ export default async function EditPostPage({
   }
 
   return (
-    <div className="min-h-screen bg-background flex flex-col">
+    <div className="min-h-screen bg-white flex flex-col">
       <LogoScrollBar />
       
       <div className="flex-1">
-        <div className="max-w-3xl mx-auto px-6 py-12">
+        <div className="max-w-4xl mx-auto px-6 md:px-8 py-16 md:py-24">
           <PostEditor post={post} />
         </div>
       </div>

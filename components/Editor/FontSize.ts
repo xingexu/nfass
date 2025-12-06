@@ -17,13 +17,28 @@ export const FontSize = Extension.create({
         attributes: {
           fontSize: {
             default: null,
-            parseHTML: (element) => element.style.fontSize?.replace('px', '') || null,
+            parseHTML: (element) => {
+              const size = element.style.fontSize?.replace('pt', '').replace('px', '') || null
+              return size ? `${size}pt` : null
+            },
             renderHTML: (attributes) => {
               if (!attributes.fontSize) {
                 return {}
               }
               return {
                 style: `font-size: ${attributes.fontSize}`,
+              }
+            },
+          },
+          fontFamily: {
+            default: null,
+            parseHTML: (element) => element.style.fontFamily || null,
+            renderHTML: (attributes) => {
+              if (!attributes.fontFamily) {
+                return {}
+              }
+              return {
+                style: `font-family: ${attributes.fontFamily}`,
               }
             },
           },
